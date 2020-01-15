@@ -33,3 +33,6 @@ CONTEXT_IP='79.85.170.130'
 CONTEXT_USER_AGENT="$(random_ua)"
 echo "\n\n\nLogin 3 from Location IP: ${CONTEXT_IP}"
 ./helpers/authenticate.sh -e '$login.succeeded' -u "${USER_ID}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
+
+echo "\n\nSuccess! Your Login from New Region Scenario was executed!"
+echo "\nVisit https://dashboard.castle.io/users/${USER_ID} to see the results"

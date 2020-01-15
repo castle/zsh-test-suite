@@ -21,3 +21,6 @@ done
 
 # Send a $login.succeeded event
 ./helpers/authenticate.sh -e '$login.succeeded' -u "${USER_ID}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
+
+echo "\n\nSuccess! Your Forgetful User Test Scenario was executed!"
+echo "\nVisit https://dashboard.castle.io/users/${USER_ID} to see the results"

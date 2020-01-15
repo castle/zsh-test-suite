@@ -43,3 +43,6 @@ CONTEXT_USER_AGENT=$(random_ua)
 CONTEXT_HEADERS=$(random_headers)
 echo "\n\n\nLogin 3 from Location IP: ${CONTEXT_IP} with User-Agent: ${CONTEXT_USER_AGENT}"
 ./helpers/authenticate.sh -e '$login.succeeded' -u "${USER_ID}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
+
+echo "\n\nSuccess! Your Login from New Client Test Scenario was executed!"
+echo "\nVisit https://dashboard.castle.io/users/${USER_ID} to see the results"
