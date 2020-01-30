@@ -43,7 +43,13 @@ EVENT_PAYLOAD=`printf '
       "client_id": false,
       "ip": "%s",
       "user_agent": "%s",
-      "headers": %s
+      "headers": %s,
+      "library": {
+        "name": "zsh-test-suite",
+        "src": "https://github.com/castle/zsh-test-suite",
+        "version": "0.1",
+        "platform": "zsh"
+      }
     }
   }' \
   $EVENT_NAME \
