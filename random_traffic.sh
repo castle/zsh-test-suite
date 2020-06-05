@@ -15,6 +15,5 @@ while true; do
   elif [[ $DICE < 101 ]]; then
     zsh ./brute_force_botnet.sh;
   fi
-  date ;
   sleep 60;
 done
