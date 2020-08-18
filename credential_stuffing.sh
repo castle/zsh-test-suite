@@ -23,12 +23,11 @@ random_ua() {
 
 # Send 100 $login.failed events, different User-Agent, IP, and targeted User for each
 for i in {1..100}; do
-  echo "FAILED LOGIN ${i}:"
+  echo "FAILED LOGIN ${i}/100:"
   CONTEXT_IP=$(random_ip)
   CONTEXT_USER_AGENT=$(random_ua)
   ./helpers/track.sh -e '$login.failed' -u "${USER_ID}_${i}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
   echo "USER_AGENT: ${CONTEXT_USER_AGENT}\n\n"
-  sleep 0.3
 done
 
 # Refresh the IP and User-Agent

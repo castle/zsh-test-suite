@@ -47,7 +47,7 @@ EVENT_PAYLOAD=`printf '
       "library": {
         "name": "zsh-test-suite",
         "src": "https://github.com/castle/zsh-test-suite",
-        "version": "0.1",
+        "version": "0.2",
         "platform": "zsh"
       }
     }

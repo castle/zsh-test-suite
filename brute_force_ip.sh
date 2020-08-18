@@ -24,9 +24,8 @@ done
 
 # Send 50 $login.failed events
 for i in {1..50}; do
-  echo "FAILED LOGIN ${i}:"
+  echo "FAILED LOGIN ${i}/100:"
   ./helpers/track.sh -e '$login.failed' -u "${USER_ID}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
-  sleep 0.1
 done
 
 # Send a $login.succeeded event

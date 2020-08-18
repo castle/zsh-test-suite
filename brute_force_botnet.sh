@@ -25,11 +25,10 @@ while getopts u:b: option; do
 done
 
 # Send 50 $login.failed events
-for i in {1..50}; do
-  echo "FAILED LOGIN ${i}:"
+for i in {1..100}; do
+  echo "FAILED LOGIN ${i}/100:"
   CONTEXT_IP=$(random_ip)
   ./helpers/track.sh -e '$login.failed' -u "${USER_ID}" -i "${CONTEXT_IP}" -b "${CONTEXT_USER_AGENT}" -h "${CONTEXT_HEADERS}"
-  sleep 0.1
 done
 
 # Refresh the IP
